@@ -10,5 +10,26 @@ app.post('/', postHandler);
 
 
 app.listen(process.env.PORT, () => console.log(`Example app listening on port ${process.env.PORT}`));
+
 function postHandler(req, res) {
+    const body = req.body;
+    console.log(body);
+
+    res.send({
+        'response_type': 'in_channel',
+        'text': 'The cow says',
+        'attachments': [
+            {
+                'text': cowsayRender('abc')
+            }
+        ]
+    });
+}
+
+function cowsayRender(text) {
+
+    let cowText = text;
+    return cowText;
+}
+
 }
