@@ -23,15 +23,16 @@ app.listen(process.env.PORT, () => console.log(`Example app listening on port ${
 // BUSINESS LOGIC
 
 function postHandler(req, res) {
-    const body = req.body;
-    console.log(body);
+    const bodyText = req.body.text;
+    const cowText = cowsayRender(bodyText);
+    console.log(cowText);
 
     res.send({
         'response_type': 'in_channel',
         'text': 'The cow says',
         'attachments': [
             {
-                'text': cowsayRender('abc')
+                'text': cowText
             }
         ]
     });
@@ -39,8 +40,9 @@ function postHandler(req, res) {
 
 function cowsayRender(text) {
 
-    let cowText = text;
-    return cowText;
-}
+    let cowText = cowsay.say({
+        text: text
+    });
 
+    return cowText;
 }
