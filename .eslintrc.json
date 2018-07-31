@@ -19,11 +19,12 @@
         "quotes": [
             "error",
             "single"
+            // "backtick"
         ],
         "semi": [
             "error",
             "always"
         ],
-        "no-console": 0 
+        "no-console": 0
     }
 }
