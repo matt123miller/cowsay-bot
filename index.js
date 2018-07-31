@@ -1,15 +1,26 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const cowsay = require('cowsay');
 require('dotenv').config({ path: '.env' });
 
 const app = new express();
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+app.use(bodyParser.json());
+
+// ROUTES
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
 //TODO: When we have a static url later use /cowsay
 app.post('/', postHandler);
 
-
 app.listen(process.env.PORT, () => console.log(`Example app listening on port ${process.env.PORT}`));
+
+// BUSINESS LOGIC
 
 function postHandler(req, res) {
     const body = req.body;
