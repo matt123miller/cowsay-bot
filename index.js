@@ -32,7 +32,7 @@ function postHandler(req, res) {
         'text': 'The cow says',
         'attachments': [
             {
-                'text': cowText
+                'text': `\`\`\`${cowText}\`\`\``
             }
         ]
     });
