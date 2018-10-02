@@ -6,7 +6,8 @@
     "scripts": {
         "test": "node index.js",
         "serve": "node dist/server.js",
-        "build:serve": "tsc && node dist/server.js"
+        "build:serve": "tsc && node dist/server.js",
+        "debug": "tsc && node dist/server.js"
     },
     "repository": {
         "type": "git",

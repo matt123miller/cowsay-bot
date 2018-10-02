@@ -4,7 +4,7 @@
  */
 
 import express from 'express';
-import { json, urlencoded } from 'body-parser';
+import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import nunjucks from 'nunjucks';
 
@@ -18,11 +18,11 @@ nunjucks.configure('views', {
     express: app
 });
 
-app.use(urlencoded({
+app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-app.use(json());
+app.use(bodyParser.json());
 
 app.set("port", process.env.PORT || 3000);
 

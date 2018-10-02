@@ -9,7 +9,8 @@ var routes_1 = require("./routes");
 routes_1.setupRoutes(app_1.default);
 // Boot up the server
 var server = app_1.default.listen(app_1.default.get('port'), function () {
-    console.log("Listening in port " + app_1.default.get('port'));
+    console.log("Listening on port " + app_1.default.get('port'));
     console.log("Visit http://localhost:" + app_1.default.get('port'));
+    console.log('Press control + C to quit.');
 });
 exports.default = server;
