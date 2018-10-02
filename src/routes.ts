@@ -1,21 +1,17 @@
 import { Application, Request, Response } from 'express';
 
-export class Router {
-    setupRoutes(app: Application) {
+import * as CowsayController from "./controllers/cowsay";
 
-        app.get('/', (req: Request, res: Response) => {
 
-            return res.render('index.html');
-        });
+// export class Router {
+export let setupRoutes = (app: Application) => {
 
-        app.post('/cowsay', (req: Request, res: Response) => {
+    app.get('/', (req: Request, res: Response) => {
 
-            return res.send({ cow: 'cowsay' });
-        });
+        return res.render('index.html');
+    });
 
-        return app;
-    }
+    app.post('/cowsay', CowsayController.getCowsay);
 
+    return app;
 }
-
-// export Router;

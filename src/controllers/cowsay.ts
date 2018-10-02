@@ -1,3 +1,6 @@
-// import cowsay from 'cowsay';
+import { Application, Request, Response } from 'express';
 
-console.log('yi')
+export let getCowsay = (req: Request, res: Response) => {
+
+    return res.send({ cow: 'cowsay' });
+}

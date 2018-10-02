@@ -1,3 +1,5 @@
 "use strict";
-// import cowsay from 'cowsay';
-console.log('yi');
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getCowsay = function (req, res) {
+    return res.send({ cow: 'cowsay' });
+};

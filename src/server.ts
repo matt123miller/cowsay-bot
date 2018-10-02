@@ -1,10 +1,8 @@
 import app from "./app";
-import { Router } from "./routes";
+import { setupRoutes } from "./routes";
 
 // Add the routes.
-const router = new Router();
-
-router.setupRoutes(app);
+setupRoutes(app);
 
 // Boot up the server
 const server = app.listen(app.get('port'), () => {
