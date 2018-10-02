@@ -5,7 +5,7 @@ var Router = /** @class */ (function () {
     }
     Router.prototype.setupRoutes = function (app) {
         app.get('/', function (req, res) {
-            return res.render('hello!');
+            return res.render('index.html');
         });
         app.post('/cowsay', function (req, res) {
             return res.send({ cow: 'cowsay' });

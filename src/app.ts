@@ -6,11 +6,17 @@
 import express from 'express';
 import { json, urlencoded } from 'body-parser';
 import dotenv from 'dotenv';
+import nunjucks from 'nunjucks';
 
 dotenv.config({ path: '.env' });
 
 
 const app = express();
+
+nunjucks.configure('views', {
+    autoescape: true,
+    express: app
+});
 
 app.use(urlencoded({
     extended: true

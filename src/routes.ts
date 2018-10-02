@@ -5,7 +5,7 @@ export class Router {
 
         app.get('/', (req: Request, res: Response) => {
 
-            return res.render('hello!');
+            return res.render('index.html');
         });
 
         app.post('/cowsay', (req: Request, res: Response) => {
