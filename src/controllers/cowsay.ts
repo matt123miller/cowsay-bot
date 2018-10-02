@@ -1,2 +1,3 @@
-import cowsay from 'cowsay';
+// import cowsay from 'cowsay';
 
+console.log('yi')
