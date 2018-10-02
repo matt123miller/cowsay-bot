@@ -18,14 +18,13 @@ app.get('/', (req, res) => res.send('Hello World!'));
 //TODO: When we have a static url later use /cowsay
 app.post('/', postHandler);
 
-app.listen(process.env.PORT, () => console.log(`Example app listening on port ${process.env.PORT}`));
+app.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}`));
 
 // BUSINESS LOGIC
 
 function postHandler(req, res) {
     const bodyText = req.body.text;
     const cowText = cowsayRender(bodyText);
-    console.log(cowText);
 
     res.send({
         'response_type': 'in_channel',
