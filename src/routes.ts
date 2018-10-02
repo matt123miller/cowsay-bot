@@ -11,7 +11,7 @@ export let setupRoutes = (app: Application) => {
         return res.render('index.html');
     });
 
-    app.post('/cowsay', CowsayController.getCowsay);
+    app.post('/cowsay', CowsayController.consumeInput);
 
     return app;
 }

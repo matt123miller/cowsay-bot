@@ -13,6 +13,6 @@ exports.setupRoutes = function (app) {
     app.get('/', function (req, res) {
         return res.render('index.html');
     });
-    app.post('/cowsay', CowsayController.getCowsay);
+    app.post('/cowsay', CowsayController.consumeInput);
     return app;
 };
