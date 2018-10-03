@@ -23,13 +23,7 @@ export let consumeInput = (req: Request, res: Response) => {
     // Send back a cow
     return res.send({
         'response_type': 'in_channel',
-        'text': 'The cow says',
-        'attachments': [
-            {
-                // Escaping the backticks so that this displays in a code block in Slack.
-                'text': `\`\`\`${cowText}\`\`\``
-            }
-        ]
+        'text': `\`\`\`${cowText}\`\`\``
     });
 }
 
