@@ -14,6 +14,6 @@ exports.consumeInput = function (req, res) {
     // Send back a cow
     return res.send({
         'response_type': 'in_channel',
-        'text': "```" + cowText + "```",
+        'text': "```" + cowText + "```"
     });
 };
